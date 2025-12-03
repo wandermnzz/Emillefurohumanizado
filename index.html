@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emile Menezes – Furo Humanizado</title>
+
+<!-- Fonte Neuton -->
+<link href="https://fonts.googleapis.com/css2?family=Neuton:wght@300;400;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* ======== GERAL ======== */
+
+body {
+    margin: 0;
+    font-family: 'Neuton', serif;
+    background: #fff;
+}
+
+h1, h2, h3, p {
+    margin: 0 0 15px;
+}
+
+/* ======== HEADER ======== */
+
+header {
+    width: 100%;
+    background: #F3DFF1; /* lilás claro da foto */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.logo img {
+    width: 120px; 
+    height: auto;
+    display: block;
+}
+
+/* Ícone hambúrguer */
+.hamburguer {
+    width: 35px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.hamburguer span {
+    height: 4px;
+    background: #7E5A8C;
+    border-radius: 5px;
+}
+
+/* ======== MENU LATERAL ======== */
+
+.menu-lateral {
+    position: fixed;
+    top: 0;
+    right: -260px;
+    width: 260px;
+    height: 100%;
+    background: #8C4A98; /* cor roxa exata que você usou */
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: 0.4s;
+    z-index: 999;
+}
+
+.menu-lateral.active {
+    right: 0;
+}
+
+/* Botão de fechar */
+.btn-fechar {
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.menu-lateral h3 {
+    margin-top: 20px;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 8px;
+}
+
+.menu-lateral p, .menu-lateral a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    margin: 10px 0;
+    display: block;
+}
+
+/* ======== CONTEÚDO ======== */
+
+.container {
+    padding: 20px;
+}
+
+.titulo {
+    color: #8C4A98;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* ======== WHATSAPP FLOAT ======== */
+
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+}
+
+.whatsapp-btn img {
+    width: 35px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ========== HEADER ========== -->
+<header>
+    <div class="logo">
+        <img src="sua-logo.png" alt="Logo">
+    </div>
+
+    <div class="hamburguer" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</header>
+
+<!-- ========== MENU LATERAL ========== -->
+<div class="menu-lateral" id="menu">
+
+    <div class="btn-fechar" onclick="toggleMenu()">✖</div>
+
+    <h3>Contato</h3>
+    <a href="https://wa.me/SEU_NUMERO">WhatsApp: (00) 00000-0000</a>
+    <a href="mailto:email@exemplo.com">E-mail: email@exemplo.com</a>
+
+    <h3>Horário</h3>
+    <p>Segunda a Sábado</p>
+    <p>08h às 18h</p>
+
+    <h3>Agendamento</h3>
+    <p>Envie uma mensagem no WhatsApp para agendar.</p>
+
+</div>
+
+<!-- ========== CONTEÚDO ========== -->
+<div class="container">
+    <h1 class="titulo">Furo Humanizado</h1>
+    <p>Atendimento humanizado para bebês, crianças e adultos.</p>
+
+    <h2 class="titulo">Nossos Serviços:</h2>
+    <p>
+        Aqui, cada furo é feito com cuidado, carinho e respeito ao seu momento.
+        Utilizamos técnicas seguras e humanizadas, priorizando seu conforto do início ao fim.
+        Do primeiro furo ao acompanhamento pós-procedimento, nossa missão é proporcionar
+        uma experiência tranquila, segura e especial.
+    </p>
+</div>
+
+<!-- ========== BOTÃO WHATSAPP ========== -->
+<a href="https://wa.me/SEU_NUMERO" class="whatsapp-btn">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+</a>
+
+<script>
+function toggleMenu() {
+    document.getElementById("menu").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
