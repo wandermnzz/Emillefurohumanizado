@@ -188,6 +188,53 @@ header {
     color: white;
     cursor: pointer;
 }
+    quem-sou-eu {
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.quem-sou-eu h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #F3DFF1; /* lilás do seu site */
+}
+
+.quem-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.quem-container img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #F3DFF1;
+}
+
+.quem-texto p {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* DESKTOP */
+@media (min-width: 768px) {
+    .quem-container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .quem-texto p {
+        text-align: left;
+    }
+}
 </style>
 </head>
 
@@ -223,6 +270,18 @@ header {
 
 </div>
 
+<section class="quem-sou-eu">
+    <div class="quem-container">
+        <img src="imgperfil.jpg" alt="Profissional">
+        <div class="quem-texto">
+            <p>Olá! Meu nome é Emille, sou especialista em furo humanizado e apaixonada por proporcionar uma experiência segura, acolhedora e delicada para cada cliente. Trabalho com técnicas profissionais, materiais esterilizados e total cuidado para garantir um procedimento tranquilo, rápido e quase indolor.</p>
+
+            <p>Meu atendimento é personalizado, feito com carinho, paciência e atenção a cada detalhe — sempre respeitando o tempo e o conforto de quem está comigo.</p>
+
+            <p>Seja para você ou para quem você ama, estou aqui para tornar esse momento especial e inesquecível!</p>
+        </div>
+    </div>
+</section
 <!-- ========== CONTEÚDO ========== -->
 <div class="container">
     <h1 class="titulo">Furo Humanizado</h1>
