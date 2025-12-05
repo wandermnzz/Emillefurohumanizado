@@ -471,18 +471,7 @@ function abrirZoom(src) {
 function fecharZoom() {
     document.getElementById("zoomModal").style.display = "none";
 }
-    const imgs = document.querySelectorAll('.galeria-zoom img');
-
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if(entry.isIntersecting){
-            entry.target.style.animation = `aparecer 0.6s forwards`;
-        }
-    });
-}, { threshold: 0.1 });
-
-imgs.forEach(img => observer.observe(img));
-    </script>
+       </script>
 
 </body>
 </html>
