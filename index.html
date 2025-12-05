@@ -251,22 +251,49 @@ header {
 /* ===================== */
 
 /* Botão WhatsApp balançando */
-@keyframes balanco {
-    0% { transform: rotate(0deg); }
-    25% { transform: rotate(15deg); }
-    50% { transform: rotate(-15deg); }
-    75% { transform: rotate(10deg); }
-    100% { transform: rotate(0deg); }
+/* ===================== */
+/* Botão WhatsApp animado */
+/* ===================== */
+
+/* Animação de entrada */
+@keyframes entrar {
+    0% {
+        transform: translateY(100px); /* começa fora da tela, abaixo */
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0); /* posição final */
+        opacity: 1;
+    }
+}
+
+/* Animação de pulsar */
+@keyframes pulsar {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); } /* aumenta 15% no meio da animação */
 }
 
 .whatsapp-btn {
-    animation: balanco 2s infinite;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    cursor: pointer;
+
+    /* Animação de entrada */
+    animation: entrar 1s ease-out forwards, pulsar 2s infinite 1s; 
+    /* A primeira é a entrada, a segunda é o pulsar que começa depois de 1s */
 }
 
-/* Efeito de hover no WhatsApp */
-.whatsapp-btn:hover {
-    transform: scale(1.2);
-    transition: transform 0.3s;
+.whatsapp-btn img {
+    width: 35px;
 }
 
 /* Fade-in das imagens da galeria */
@@ -369,15 +396,15 @@ header {
   </div>
     
     <div class="foto">
-    <img src="img4.jpg" alt="Foto 3" onclick="abrirZoom(this.src)">
+    <img src="img4.jpg" alt="Foto 4" onclick="abrirZoom(this.src)">
     </div>
 
     <div class="foto">
-    <img src="img5.jpg" alt="Foto 3" onclick="abrirZoom(this.src)">
+    <img src="img5.jpg" alt="Foto 5" onclick="abrirZoom(this.src)">
     </div>
     
     <div class="foto">
-    <img src="img6.jpg" alt="Foto 3" onclick="abrirZoom(this.src)">
+    <img src="img6.jpg" alt="Foto 6" onclick="abrirZoom(this.src)">
     </div>
 
 </div>
