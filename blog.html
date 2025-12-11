@@ -166,17 +166,90 @@ header { animation-delay: 0.1s; }
 .galeria-zoom .foto { animation-delay: 0.25s; }
 .container { animation-delay: 0.3s; }
 footer { animation-delay: 0.45s; }
+    header {
+    width: 100%;
+    background: #F3DFF1; /* lilás claro da foto */
+    padding: 1px 9px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.logo img {
+    width: 110px; 
+    height: 110px;
+    display: block;
+}
+
+/* Ícone hambúrguer */
+.hamburguer {
+    width: 25px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.hamburguer span {
+    height: 4px;
+    background: #A38DA3;
+    border-radius: 5px;
+}
+
+/* ======== MENU LATERAL ======== */
+
+.menu-lateral {
+    position: fixed;
+    top: 0;
+    right: -260px;
+    width: 260px;
+    height: 100%;
+    background: #8C4A98; /* cor roxa exata que você usou */
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: 0.4s;
+    z-index: 999;
+}
+
+.menu-lateral.active {
+    right: 0;
+}
+
+/* Botão de fechar */
+.btn-fechar {
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.menu-lateral h3 {
+    margin-top: 20px;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 8px;
+}
+
+.menu-lateral p, .menu-lateral a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    margin: 10px 0;
+    display: block;
+}
   </style>
 </head>
 
 <body>
   <div id="header-placeholder"></div>
-  <header style="width: 100%; background: #fff; padding: 15px; text-align: center; box-sizing: border-box;">
-   <a href="index.html" class="voltar">← Voltar</a>
+  <a href="index.html" class="voltar">← Voltar</a>
     <h1 style="margin: 0; font-size: 28px; color: #A38DA3; font-weight: bold;">
         Blog – Furo Humanizado
     </h1>
-</header>
 
   <div class="container">
 
