@@ -713,13 +713,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // 🔧 Ajuste para o zoom funcionar com fade-in
-    const zoomImgs = document.querySelectorAll("img");
+  // Ativa zoom SOMENTE nas imagens da galeria
+const zoomImgs = document.querySelectorAll(".galeria-zoom img");
 
-    zoomImgs.forEach(img => {
-        img.addEventListener("click", () => {
-            if (img.src) abrirZoom(img.src);
-        });
+zoomImgs.forEach(img => {
+    img.addEventListener("click", () => {
+        abrirZoom(img.src);
     });
+});
 
 });
        </script>
