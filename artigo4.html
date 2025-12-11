@@ -74,6 +74,46 @@
     font-size: 18px;
     font-weight: bold;
 }
+    /* ========================= */
+/* ANIMAÇÃO GLOBAL AUTOMÁTICA */
+/* ========================= */
+
+@keyframes fadeInSite {
+    0% {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* APLICAR ANIMAÇÃO EM TODA ESTRUTURA DO SITE */
+header,
+.menu-lateral,
+section,
+.container,
+footer,
+.galeria-zoom .foto,
+.quem-container,
+.quem-texto p,
+h1, h2, h3, h4, h5, h6,
+p,
+img,
+a,
+button {
+    opacity: 0;
+    transform: translateY(25px);
+    animation: fadeInSite 0.9s ease-out forwards;
+}
+
+/* Pequeno delay automático para suavizar elementos em sequência */
+header { animation-delay: 0.1s; }
+.quem-container { animation-delay: 0.2s; }
+.galeria-zoom .foto { animation-delay: 0.25s; }
+.container { animation-delay: 0.3s; }
+footer { animation-delay: 0.45s; }
   </style>
 </head>
 <body>
