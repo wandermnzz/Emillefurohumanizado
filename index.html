@@ -538,32 +538,32 @@ footer { animation-delay: 0.45s; }
 
 <div class="galeria-zoom">
   
-  <div class="foto">
+  <div class="foto fade-in">
     <img src="img1.jpg" alt="Perfuração infantil segura e humanizada feita por Emille" onclick="abrirZoom(this.src)"
       loading="lazy">
   </div>
 
-  <div class="foto">
+  <div class="foto fade-in">
     <img src="img2.jpg" alt="Perfuração adulta com técnica delicada e profissional" onclick="abrirZoom(this.src)"
       loading="lazy">
   </div>
 
-  <div class="foto">
+  <div class="foto fade-in">
     <img src="img3.jpg" alt="Profissional Emille Menezes realizando furo humanizado" onclick="abrirZoom(this.src)"
         loading="lazy">
   </div>
     
-  <div class="foto">
+  <div class="foto fade-in">
     <img src="img4.jpg" alt="Procedimento de furo humanizado com materiais esterilizados" onclick="abrirZoom(this.src)"
         loading="lazy">
   </div>
 
-  <div class="foto">
+  <div class="foto fade-in">
     <img src="img5.jpg" alt="Atendimento personalizado em furo humanizado para clientes de Aracaju" onclick="abrirZoom(this.src)"
       loading="lazy">
   </div>
     
-  <div class="foto">
+  <div class="foto fade-in">
     <img src="img6.jpg" alt="Experiência segura e acolhedora de furo humanizado com Emille" onclick="abrirZoom(this.src)"
         loading="lazy">
   </div>
@@ -695,6 +695,14 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.1 });
 
 imgs.forEach(img => observer.observe(img));
+document.addEventListener("DOMContentLoaded", () => {
+  const elements = document.querySelectorAll(".fade-in");
+  elements.forEach((el, index) => {
+    setTimeout(() => {
+      el.classList.add("show");
+    }, 200 * index);
+  });
+  
        </script>
 
 </body>
