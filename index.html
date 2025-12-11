@@ -676,6 +676,8 @@ footer { animation-delay: 0.45s; }
 function toggleMenu() {
     document.getElementById("menu").classList.toggle("active");
 }
+
+/* --- ZOOM --- */
 function abrirZoom(src) {
     document.getElementById("zoomModal").style.display = "flex";
     document.getElementById("zoomImg").src = src;
@@ -684,25 +686,42 @@ function abrirZoom(src) {
 function fecharZoom() {
     document.getElementById("zoomModal").style.display = "none";
 }
-    const imgs = document.querySelectorAll('.galeria-zoom img');
+
+/* --- OBSERVER PARA ANIMAÇÃO DAS IMAGENS DA GALERIA --- */
+const imgs = document.querySelectorAll('.galeria-zoom img');
 
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-        if(entry.isIntersecting){
+        if (entry.isIntersecting) {
             entry.target.style.animation = `aparecer 0.6s forwards`;
         }
     });
 }, { threshold: 0.1 });
 
 imgs.forEach(img => observer.observe(img));
+
+/* --- ANIMAÇÃO FADE-IN --- */
 document.addEventListener("DOMContentLoaded", () => {
-  const elements = document.querySelectorAll(".fade-in");
-  elements.forEach((el, index) => {
-    setTimeout(() => {
-      el.classList.add("show");
-    }, 200 * index);
-  });
-  
+
+    // Adiciona a classe show de forma escalonada
+    const elements = document.querySelectorAll(".fade-in");
+
+    elements.forEach((el, index) => {
+        setTimeout(() => {
+            el.classList.add("show");
+        }, 200 * index);
+    });
+
+    // 🔧 Ajuste para o zoom funcionar com fade-in
+    const zoomImgs = document.querySelectorAll("img");
+
+    zoomImgs.forEach(img => {
+        img.addEventListener("click", () => {
+            if (img.src) abrirZoom(img.src);
+        });
+    });
+
+});
        </script>
 
 </body>
