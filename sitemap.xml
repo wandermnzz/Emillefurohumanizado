@@ -1,16 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-<url>
-  <loc>https://emillefurohumanizado.site/</loc>
-  <lastmod>2025-12-05T03:06:47+00:00</lastmod>
-</url>
+  <!-- Página principal -->
+  <url>
+    <loc>https://emillefurohumanizado.site/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
 
+  <!-- Blog -->
+  <url>
+    <loc>https://emillefurohumanizado.site/blog.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- FAQ (se você tiver no index.html, manter também no sitemap) -->
+  <url>
+    <loc>https://emillefurohumanizado.site/#faq</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Artigo 1 -->
+  <url>
+    <loc>https://emillefurohumanizado.site/artigo1.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Artigo 2 -->
+  <url>
+    <loc>https://emillefurohumanizado.site/artigo2.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Artigo 3 -->
+  <url>
+    <loc>https://emillefurohumanizado.site/artigo3.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Artigo 4 -->
+  <url>
+    <loc>https://emillefurohumanizado.site/artigo4.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Artigo 5 -->
+  <url>
+    <loc>https://emillefurohumanizado.site/artigo5.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
 </urlset>
