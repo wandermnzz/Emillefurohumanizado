@@ -170,6 +170,7 @@ footer { animation-delay: 0.45s; }
 </head>
 
 <body>
+  <div id="header-placeholder"></div>
   <header style="width: 100%; background: #fff; padding: 15px; text-align: center; box-sizing: border-box;">
    <a href="index.html" class="voltar">← Voltar</a>
     <h1 style="margin: 0; font-size: 28px; color: #A38DA3; font-weight: bold;">
@@ -213,6 +214,12 @@ footer { animation-delay: 0.45s; }
   <footer>
     © 2025 • Emille Menezes Furo Humanizado em Aracaju
   </footer>
-
+<script>
+  fetch("header.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+    });
+</script>
 </body>
 </html>
