@@ -339,9 +339,12 @@
 </footer>
 <script>
 function toggleMenu() {
-    document.getElementById("menu").classList.toggle("active");
-}
+    const menu = document.getElementById("menu");
+    const hamburguer = document.querySelector(".hamburguer");
 
+    menu.classList.toggle("active");
+    hamburguer.classList.toggle("active");
+}
 /* --- ZOOM --- */
 function abrirZoom(src) {
     document.getElementById("zoomModal").style.display = "flex";
