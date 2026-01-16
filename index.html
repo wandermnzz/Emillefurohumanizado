@@ -90,6 +90,7 @@
 <meta name="keywords" content="Furo humanizado, Emille Menezes, Perfuração infantil, Perfuração adulto, Furo humanizado Aracaju">
 <meta name="author" content="Emille Menezes">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <meta name="google-site-verification" content="nUthBM8skikQFk7UYjW2_oYj-LMfDfY7Hzurn9WN58A">
 <!-- Fonte Neuton -->
 <link href="https://fonts.googleapis.com/css2?family=Neuton:wght@300;400;700&display=swap" rel="stylesheet">
@@ -148,11 +149,7 @@
         <img src="logo.png" alt="Logo Emille Menezes Furo Humanizado">
     </div>
 
-    <div class="hamburguer" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
+    <i class="fa-solid fa-bars hamburguer" onclick="toggleMenu(this)"></i>
 </header>
 
 <!-- ========== MENU LATERAL ========== -->
@@ -391,6 +388,20 @@ zoomImgs.forEach(img => {
 });
 
 });
+function toggleMenu(icon) {
+    const menu = document.getElementById('menu');
+
+    menu.classList.toggle('active');
+    icon.classList.toggle('active');
+
+    if (icon.classList.contains('fa-bars')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-xmark');
+    } else {
+        icon.classList.remove('fa-xmark');
+        icon.classList.add('fa-bars');
+    }
+}
        </script>
 
 </body>
